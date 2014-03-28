@@ -16,17 +16,23 @@ class Riemann::Tools::PostgreSQL
   opt :postgresql_database, "Database to connect", :type => String, :default => "postgres"
 
   def initialize
-    @conn = PG.connect(:host     => opts[:postgresql_host], 
-      	               :port     => opts[:postgresql_port],
-      	               :user     => opts[:postgresql_username],
-      	               :password => opts[:postgresql_password],
-      	               :dbname   => opts[:postgresql_database])
+    begin
+      @conn = PG.connect(:host     => opts[:postgresql_host],
+                         :port     => opts[:postgresql_port],
+      	                 :user     => opts[:postgresql_username],
+      	                 :password => opts[:postgresql_password],
+      	                 :dbname   => opts[:postgresql_database])
+    rescue
+      PG::Error
+        puts "Error: Unable to connect with PostgreSQL server."
+        exit 1
+    end
   end
 
   def tick
     @conn.transaction do
 
-      # General DB statictics.
+      # General DB statistics.
       @conn.exec("DECLARE general CURSOR FOR SELECT pg_stat_database.*, pg_database_size \
                   (pg_database.datname) AS size FROM pg_database JOIN pg_stat_database ON \
                   pg_database.datname = pg_stat_database.datname WHERE pg_stat_database.datname \ 
