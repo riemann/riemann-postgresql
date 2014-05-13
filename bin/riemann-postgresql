@@ -3,7 +3,7 @@
 # Reports PostgreSQL statistics to Riemann.
 # http://www.postgresql.org/docs/9.2/static/monitoring-stats.html
 
-require File.expand_path('../../lib/riemann/tools', __FILE__)
+require 'riemann/tools'
 
 class Riemann::Tools::PostgreSQL
   include Riemann::Tools
