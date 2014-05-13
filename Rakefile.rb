@@ -20,6 +20,7 @@ gemspec = Gem::Specification.new do |s|
   s.summary = 'PostgreSQL Riemann Client'
 
   s.add_dependency 'riemann-tools', '>= 0.2.1'
+  s.add_dependency 'pg', '>= 0.17.1'
 
   s.files = FileList['bin/*', 'LICENSE', 'README.md'].to_a
   s.executables |= Dir.entries('bin/')
