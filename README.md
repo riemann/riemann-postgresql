@@ -1,14 +1,12 @@
 Riemann PostgreSQL
 =============
 
-PostgreSQL Riemann client.
+A PostgreSQL Riemann client.
 
 Get Started
 =============
 
-Ruby PostgreSQL Client 'pg' has some dependency on PostgreSQL development libraries.
-
-Install this package using your OS package manager. 
+The Ruby PostgreSQL Client `pg` has a dependency on the PostgreSQL development libraries. You will need to install this package using your OS package manager.
 
 **Ubuntu/Debian :**
 
@@ -22,15 +20,14 @@ sudo apt-get install postgresql-server-dev-<postgresql-server-version>  (e.g. po
 sudo yum install postgresql-devel
 ```
 
-Install riemann-postgresql gem.
+Then install the `riemann-postgresql` gem.
 
 ```bash
 gem install riemann-postgresql
 ```
 
-Use --help option of riemann-postgresql to see available options.
+Use the `--help` option of the `riemann-postgresql` binary to see the available options.
 
 ```bash
 riemann-postgresql --help
 ```
-
