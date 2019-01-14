@@ -14,12 +14,13 @@ gemspec = Gem::Specification.new do |s|
   s.name = 'riemann-postgresql'
   s.version = '0.1.1'
   s.author = 'Pradeep Chhetri'
+  s.license = 'MIT'
   s.email = 'pradeep.chhetri89@gmail.com'
   s.homepage = 'https://github.com/riemann/riemann-postgresql'
   s.platform = Gem::Platform::RUBY
   s.summary = 'PostgreSQL Riemann Client'
 
-  s.add_dependency 'riemann-tools', '>= 0.2.1'
+  s.add_dependency 'riemann-tools', '~> 0.2.18'
   s.add_dependency 'pg', '>= 0.17.1'
 
   s.files = FileList['bin/*', 'LICENSE', 'README.md'].to_a
