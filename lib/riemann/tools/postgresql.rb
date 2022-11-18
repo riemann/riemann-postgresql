@@ -59,7 +59,7 @@ module Riemann
           @conn.exec("DECLARE connection CURSOR FOR SELECT datname, count(datname) FROM pg_stat_activity \
                   GROUP BY pg_stat_activity.datname")
 
-          result = @conn.exec('FETCH ALL in connection')
+          result = @conn.exec('FETCH ALL IN connection')
           result.values.collect do |row|
             vals = row.collect.to_a
             report(
