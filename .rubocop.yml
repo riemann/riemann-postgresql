@@ -1,0 +1,42 @@
+---
+require:
+  - rubocop-rake
+  - rubocop-rspec
+AllCops:
+  Exclude:
+    - lib/riemann/tools/*_parser.tab.rb
+    - vendor/bundle/**/*
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+Layout/LineLength:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ParameterLists:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+RSpec/NamedSubject:
+  Enabled: false
+RSpec/SubjectStub:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
