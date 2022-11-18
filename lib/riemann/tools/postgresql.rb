@@ -23,8 +23,7 @@ module Riemann
                            user: opts[:postgresql_username],
                            password: opts[:postgresql_password],
                            dbname: opts[:postgresql_database],)
-      rescue StandardError
-        PG::Error
+      rescue PG::Error
         puts 'Error: Unable to connect with PostgreSQL server.'
         exit 1
       end
