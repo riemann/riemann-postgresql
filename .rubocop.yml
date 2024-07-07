@@ -26,11 +26,10 @@ Metrics/ParameterLists:
   Enabled: false
 Metrics/PerceivedComplexity:
   Enabled: false
-Naming/MethodParameterName:
-  AllowedNames:
-    - az # availability zone
-    - id
-    - lb # load balancer
+RSpec/NamedSubject:
+  Enabled: false
+RSpec/SubjectStub:
+  Enabled: false
 Style/Documentation:
   Enabled: false
 Style/HashSyntax:
