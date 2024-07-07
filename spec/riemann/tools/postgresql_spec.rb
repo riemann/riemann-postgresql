@@ -22,12 +22,10 @@ RSpec.describe Riemann::Tools::Postgresql do
 
     before do
       general_result = double
-      allow(general_result).to receive(:fields).and_return(general_fields)
-      allow(general_result).to receive(:values).and_return(general_values)
+      allow(general_result).to receive_messages(fields: general_fields, values: general_values)
 
       connection_result = double
-      allow(connection_result).to receive(:fields).and_return(connection_fields)
-      allow(connection_result).to receive(:values).and_return(connection_values)
+      allow(connection_result).to receive_messages(fields: connection_fields, values: connection_values)
 
       conn = double
       allow(conn).to receive(:transaction).and_yield
